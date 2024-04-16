@@ -104,7 +104,7 @@ public final class DropDown: UIView {
 
 
 	/// The view to which the drop down will displayed onto.
-	public weak var anchorView: AnchorView? {
+	@objc public weak var anchorView: AnchorView? {
 		didSet { setNeedsUpdateConstraints() }
 	}
 
@@ -381,7 +381,7 @@ public final class DropDown: UIView {
 
 	Changing the data source automatically reloads the drop down.
 	*/
-	public var dataSource = [String]() {
+	@objc public var dataSource = [String]() {
 		didSet {
             deselectRows(at: selectedRowIndices)
 			reloadAllComponents()
